@@ -13,3 +13,13 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         alert('Please fill out all fields and select at least one meal preference.');
         return;
     }
+// Display registration details
+    const detailsDiv = document.getElementById('registrationDetails');
+    detailsDiv.innerHTML = `
+        <h2>Registration Details</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Event Date:</strong> ${eventDate}</p>
+        <p><strong>Meal Preferences:</strong> ${mealPreferences.join(', ')}</p>
+    `;
+});
